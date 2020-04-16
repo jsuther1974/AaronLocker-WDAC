@@ -17,8 +17,8 @@ Create-Policies-WDAC.ps1 is called by Create-Policies.ps1 to generate comprehens
 # used is the Windows template for "Deny All". This is by design for these scripts.
 ####################################################################################################
 $WDACBaseXMLFile = $env:windir+"\schemas\CodeIntegrity\ExamplePolicies\DefaultWindows_Audit.xml"
-$WDACDenyBaseXMLFile = $env:windir+"\schemas\CodeIntegrity\ExamplePolicies\AllowAll.xml"
-$WDACAllowBaseXMLFile = $env:windir+"\schemas\CodeIntegrity\ExamplePolicies\DenyAllAudit.xml"
+$WDACDenyBaseXMLFile = $env:windir+"\schemas\CodeIntegrity\ExamplePolicies\DenyAllAudit.xml"
+$WDACAllowBaseXMLFile = $env:windir+"\schemas\CodeIntegrity\ExamplePolicies\AllowAll.xml"
 
 $WDACAllowRulesXMLFile = ([System.IO.Path]::Combine($mergeRulesDynamicDir, $WDACrulesFileBase + "AllowRules.xml"))
 $WDACBlockPolicyXMLFile = [System.IO.Path]::Combine($mergeRulesDynamicDir, $WDACrulesFileBase + "ExeBlocklist.xml")
